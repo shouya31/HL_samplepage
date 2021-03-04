@@ -2,18 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
     <link rel="stylesheet" href="./index.css">
     <title>HappyLaugh MAGAZINE</title>
   </head>
   <body>
-    <header class="border-b-8 border-gray-200">
-      <div class="flex flex-col mb-8">
-        <div class="text-4xl font-semibold flex justify-center">ハピラフ</div>
-        <div class="text-6xl font-black flex justify-center">MAGAZINE</div>
+    <!-- ここからheader -->
+    <header class="lg:border-b-8 lg:border-gray-200">
+      <!-- ここからロゴ -->
+      <div class="pt-4 pb-4 lg:mb-8">
+        <div class="text-xl lg:text-4xl font-semibold flex justify-center">ハピラフ</div>
+        <div class="text-3xl lg:text-6xl font-black flex justify-center">MAGAZINE</div>
       </div>
-      <div class="flex justify-center mb-4">
-        <div class="w-1280 flex justify-around">
+      <!-- ロゴここまで -->
+
+      <!-- ここからMobileMenu
+      MobileMenuここまで -->
+
+      <!-- ここからPCMenu -->
+      <div class="hidden lg:flex lg:justify-center lg:mb-4">
+        <div class="w-1080 flex justify-around">
           <div>HOME</div>
           <div>RANKING</div>
           <div>category1</div>
@@ -23,9 +31,13 @@
           <div>category5</div>
         </div>
       </div>
+      <!-- PCMenuここまで -->
     </header>
-    <div class="h-600 w-full flex justify-center items-center mt-16 mb-32">
-      <div class="h-600 w-1080 bg-cover bg-no-repeat bg-center bg-avocado">
+    <!-- headerここまで -->
+
+    <!-- ここからPICKUP -->
+    <div class="hidden lg:block h-560 w-full lg:flex justify-center items-center lg:mt-16 mb-48">
+      <div class="h-560 w-960 bg-cover bg-no-repeat bg-center bg-avocado">
         <div class="w-12 bg-white">CAFE</div>
           <div class="h-560 w-full flex justify-center items-center">
             <div class="">
@@ -43,45 +55,38 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="grid grid-cols-3 mb-32">
-      <div class="col-span-2 flex flex-col justify-self-center">
-        <div class="h-24 w-1080 text-6xl font-bold border-b-8 border-gray-900 mb-12">NEWS</div>
-        <div class="w-1280 flex mb-8">
-          <div class="h-64 w-64 bg-contain bg-no-repeat bg-avocado">
-            <div class="w-min bg-white">category</div>
+      </div>
+      <!-- PICKUPここまで -->
+
+      <!-- mobilePICKUPここから -->
+        <div class="lg:hidden">
+          <div class="h-64 bg-cover bg-no-repeat bg-center bg-avocado">
+            <div class="bg-white w-min">CAFE</div>
           </div>
-          <div class="h-64 w-1080 ml-4">
-            <div class="h-4 w-full flex justify-between mb-2">
-              <div>2021.03.02</div>
-              <div class="flex">
-                <div class="h-8 w-8 bg-contain bg-no-repeat bg-avocado"></div>
-                <div class="ml-4">User</div>
+          <div class="p-4">
+            <div class="text-2xl mb-2">title</div>
+            <div class="text-xs text-gray-300 mb-2">2021.03.04</div>
+            <div class="flex">
+              <div class="h-6 w-6 bg-contain bg-no-repeat bg-avocado"></div>
+              <div class="flex items-center">
+                <div class="text-xs text-gray-300 ml-2">user</div>
               </div>
             </div>
-            <div class="text-5xl mb-2">title</div>
-            <div class="text-2xl break-words">ここうまくいってない。heightをoverflowしたときに、「...」で表示されるようにする。</div>
           </div>
-        </div>        <div class="w-1280 flex mb-8">
-          <div class="h-64 w-64 bg-contain bg-no-repeat bg-avocado">
+        </div>
+
+    <!-- ここからPCメインコンテンツ -->
+    <div class="grid grid-cols-2 lg:grid-cols-9 lg:mb-32">
+      <!-- ここからNEWS -->
+      <div class="grid-span-1 lg:col-start-2 lg:col-end-7 lg:flex lg:flex-col lg:justify-self-center">
+        <div class="h-14 w-full text-2xl lg:h-24 lg:w-720 lg:text-6xl lg:font-bold lg:border-b-8 lg:border-gray-900 mb-12">NEWS</div>
+
+        <!-- ここから投稿 -->
+        <div class="w-full lg:w-840 flex mb-8">
+          <div class="h-56 w-56 bg-contain bg-no-repeat bg-avocado">
             <div class="w-min bg-white">category</div>
           </div>
-          <div class="h-64 w-1080 ml-4">
-            <div class="h-4 w-full flex justify-between mb-2">
-              <div>2021.03.02</div>
-              <div class="flex">
-                <div class="h-8 w-8 bg-contain bg-no-repeat bg-avocado"></div>
-                <div class="ml-4">User</div>
-              </div>
-            </div>
-            <div class="text-5xl mb-2">title</div>
-            <div class="text-2xl break-words">ここうまくいってない。heightをoverflowしたときに、「...」で表示されるようにする。</div>
-          </div>
-        </div>        <div class="w-1280 flex mb-8">
-          <div class="h-64 w-64 bg-contain bg-no-repeat bg-avocado">
-            <div class="w-min bg-white">category</div>
-          </div>
-          <div class="h-64 w-1080 ml-4">
+          <div class="h-56 w-580 ml-4">
             <div class="h-4 w-full flex justify-between mb-2">
               <div>2021.03.02</div>
               <div class="flex">
@@ -93,50 +98,59 @@
             <div class="text-2xl break-words">ここうまくいってない。heightをoverflowしたときに、「...」で表示されるようにする。</div>
           </div>
         </div>
-        <div class="w-1280 flex justify-center items-center">
+        <!-- 投稿ここまで -->
+
+        <!-- ここからREADMORE -->
+        <div class="w-full lg:w-840 flex justify-center items-center mt-8">
           <div class="h-20 w-96 flex justify-center items-center border-4 border-gray-900">
             <div class="text-3xl text-center">
               READ MORE
             </div>
           </div>
         </div>
+        <!-- READMOREここまで-->
       </div>
-      <div class="col-span-1 flex flex-col justify-self-center">
-        <div class="h-20 w-96 flex items-center bg-black mb-8">
-          <div class="text-4xl text-white ml-4">
+      <!-- NEWSここまで -->
+
+      <!-- ここからRANKING -->
+      <div class="grid-span-2 w-full lg:col-start-7 lg:col-end-9 lg:flex lg:flex-col lg:justify-self-center">
+        <div class="h-14 lg:w-300 lg:flex lg:items-center bg-black mb-8">
+          <div class="text-4xl font-light text-white ml-4">
             RANKING
           </div>
         </div>
-        <div class="h-40 w-580 flex mb-6">
-          <dvi class="h-40 w-40 bg-contain bg-no-repeat bg-avocado">
+
+        <!-- RANKING投稿 -->
+        <div class="h-24 w-full lg:w-380 flex mb-6">
+          <dvi class="h-24 w-24 bg-contain bg-no-repeat bg-avocado">
             <div class="w-10 text-white bg-black">順位</div>
           </dvi>
-          <dvi class="w-480 text-xl break-words ml-4">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</dvi>
+          <dvi class="w-240 text-xl break-words ml-4">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</dvi>
         </div>
-        <div class="h-40 w-580 flex mb-6">
-          <dvi class="h-40 w-40 bg-contain bg-no-repeat bg-avocado">
-            <div class="w-10 text-white bg-black">順位</div>
-          </dvi>
-          <dvi class="w-480 text-xl break-words ml-4">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</dvi>
-        </div>
-        <div class="h-40 w-580 flex mb-6">
-          <dvi class="h-40 w-40 bg-contain bg-no-repeat bg-avocado">
-            <div class="w-10 text-white bg-black">順位</div>
-          </dvi>
-          <dvi class="w-480 text-xl break-words ml-4">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</dvi>
-        </div>
-        <div class="w-580 flex justify-center items-center">
-          <div class="h-16 w-48 flex justify-center items-center border-2 border-gray-900">
+        <!-- RANKING投稿 -->
+
+        <div class="w-full lg:w-380 flex justify-center items-center mt-8">
+          <div class="h-16 lg:w-48 flex justify-center items-center border-4 border-gray-900">
             <div class="text-xl text-center">
               READ MORE
             </div>
           </div>
         </div>
       </div>
+      <!-- RANKINGここまで -->
     </div>
-    <div class="h-96 w-screen bg-center bg-cover bg-no-repeat bg-avocado flex justify-center items-center">
-      <div class="h-48 w-640 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center">
-        <div class="text-xl text-center">
+    <!-- PCメインコンテンツここまで -->
+
+    <!-- ここからmobileメインコンテンツ -->
+    <div>
+
+    </div>
+    <!-- mobileメインコンテンツここまで -->
+
+    <!-- ここから帯 -->
+    <div class="h-480 w-screen bg-center bg-cover bg-avocado flex justify-center items-center">
+      <div class="h-240 w-640 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center">
+        <div class="text-2xl text-center">
           texttexttexttexttexttexttexttexttexttext<br>
           texttexttexttexttexttexttexttext
         </div>
@@ -147,10 +161,14 @@
         </div>
       </div>
     </div>
-    <footer class="mt-16 h-96 grid grid-cols-3 divide-x divide-graywhite">
-      <div class="">
-        <div class="text-xl font-semibold flex justify-center">ハピラフ</div>
-        <div class="text-4xl font-black flex justify-center">MAGAZINE</div>
+    <!-- 帯ここまで -->
+
+    <!-- ここからFooter -->
+    <footer class="pt-16 h-96 grid grid-cols-3 divide-x divide-graywhite">
+      <!-- ここからコンセプト -->
+      <div class="flex flex-col items-center pt-12">
+        <div class="text-xl font-semibold">ハピラフ</div>
+        <div class="text-4xl font-black">MAGAZINE</div>
         <div class="text-md text-center text-gray-300 mt-8">
           texttexttexttexttexttexttexttexttext<br>
           texttexttexttexttexttexttext<br>
@@ -159,20 +177,28 @@
           texttexttexttexttexttexttext
         </div>
       </div>
-      <div class="pl-8">
-        <div class="text-xl font-medium">Menu</div>
-        <div class="mt-2 text-md text-gray-400">NEWS</div>
-        <div class="mt-2 text-md text-gray-400">RANKING</div>
+      <!-- コンセプトここまで -->
+
+      <!-- ここからMenu -->
+      <div class="pt-12 pl-8">
+        <div class="text-lg font-medium">Menu</div>
+        <div class="text-md text-gray-400 mt-2">NEWS</div>
+        <div class="text-md text-gray-400 mt-2">RANKING</div>
       </div>
-      <div class="pl-8">
-        <div class="text-xl font-medium">Category</div>
-        <div class="mt-2 text-md text-gray-400">category1</div>
-        <div class="mt-2 text-md text-gray-400">category2</div>
-        <div class="mt-2 text-md text-gray-400">category3</div>
-        <div class="mt-2 text-md text-gray-400">category4</div>
-        <div class="mt-2 text-md text-gray-400">category5</div>
-        <div class="mt-2 text-md text-gray-400">category6</div>
+      <!-- Menuここまで -->
+
+      <!-- ここからCategory -->
+      <div class="pt-12 pl-8">
+        <div class="text-lg font-medium">Category</div>
+        <div class="text-md text-gray-400 mt-2">category1</div>
+        <div class="text-md text-gray-400 mt-2">category2</div>
+        <div class="text-md text-gray-400 mt-2">category3</div>
+        <div class="text-md text-gray-400 mt-2">category4</div>
+        <div class="text-md text-gray-400 mt-2">category5</div>
+        <div class="text-md text-gray-400 mt-2">category6</div>
       </div>
+      <!-- Categoryここまで -->
     </footer>
+    <!-- Footerここまで -->
   </body>
 </html>

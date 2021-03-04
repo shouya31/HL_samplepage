@@ -2,22 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
     <link rel="stylesheet" href="./index.css">
     <title>HappyLaugh MAGAZINE</title>
   </head>
   <body>
     <!-- ここからheader -->
-    <header class="border-b-8 border-gray-200">
+    <header class="lg:border-b-8 lg:border-gray-200">
       <!-- ここからロゴ -->
-      <div class="flex flex-col mb-8">
-        <div class="text-4xl font-semibold flex justify-center">ハピラフ</div>
-        <div class="text-6xl font-black flex justify-center">MAGAZINE</div>
+      <div class="pt-4 pb-4 lg:mb-8">
+        <div class="text-xl lg:text-4xl font-semibold flex justify-center">ハピラフ</div>
+        <div class="text-3xl lg:text-6xl font-black flex justify-center">MAGAZINE</div>
       </div>
       <!-- ロゴここまで -->
 
-      <!-- ここからMenu -->
-      <div class="flex justify-center mb-4">
+      <!-- ここからMobileMenu
+      MobileMenuここまで -->
+
+      <!-- ここからPCMenu -->
+      <div class="hidden lg:flex lg:justify-center lg:mb-4">
         <div class="w-1080 flex justify-around">
           <div>HOME</div>
           <div>RANKING</div>
@@ -28,12 +31,12 @@
           <div>category5</div>
         </div>
       </div>
-      <!-- Menuここまで -->
+      <!-- PCMenuここまで -->
     </header>
     <!-- headerここまで -->
 
     <!-- ここからPICKUP -->
-    <div class="h-560 w-full flex justify-center items-center mt-16 mb-48">
+    <div class="hidden lg:block h-560 w-full lg:flex justify-center items-center lg:mt-16 mb-48">
       <div class="h-560 w-960 bg-cover bg-no-repeat bg-center bg-avocado">
         <div class="w-12 bg-white">CAFE</div>
           <div class="h-560 w-full flex justify-center items-center">
@@ -52,16 +55,34 @@
             </div>
           </div>
         </div>
-    </div>
-    <!-- PICKUPここまで -->
+      </div>
+      <!-- PICKUPここまで -->
 
-    <div class="grid grid-cols-9 mb-32">
+      <!-- mobilePICKUPここから -->
+        <div class="lg:hidden">
+          <div class="h-64 bg-cover bg-no-repeat bg-center bg-avocado">
+            <div class="bg-white w-min">CAFE</div>
+          </div>
+          <div class="p-4">
+            <div class="text-2xl mb-2">title</div>
+            <div class="text-xs text-gray-300 mb-2">2021.03.04</div>
+            <div class="flex">
+              <div class="h-6 w-6 bg-contain bg-no-repeat bg-avocado"></div>
+              <div class="flex items-center">
+                <div class="text-xs text-gray-300 ml-2">user</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!-- ここからPCメインコンテンツ -->
+    <div class="grid grid-cols-2 lg:grid-cols-9 lg:mb-32">
       <!-- ここからNEWS -->
-      <div class="col-start-2 col-end-7 flex flex-col justify-self-center">
-        <div class="h-24 w-720 text-6xl font-bold border-b-8 border-gray-900 mb-12">NEWS</div>
+      <div class="grid-span-1 lg:col-start-2 lg:col-end-7 lg:flex lg:flex-col lg:justify-self-center">
+        <div class="h-14 w-full text-2xl lg:h-24 lg:w-720 lg:text-6xl lg:font-bold lg:border-b-8 lg:border-gray-900 mb-12">NEWS</div>
 
         <!-- ここから投稿 -->
-        <div class="w-840 flex mb-8">
+        <div class="w-full lg:w-840 flex mb-8">
           <div class="h-56 w-56 bg-contain bg-no-repeat bg-avocado">
             <div class="w-min bg-white">category</div>
           </div>
@@ -80,7 +101,7 @@
         <!-- 投稿ここまで -->
 
         <!-- ここからREADMORE -->
-        <div class="w-840 flex justify-center items-center mt-8">
+        <div class="w-full lg:w-840 flex justify-center items-center mt-8">
           <div class="h-20 w-96 flex justify-center items-center border-4 border-gray-900">
             <div class="text-3xl text-center">
               READ MORE
@@ -92,15 +113,15 @@
       <!-- NEWSここまで -->
 
       <!-- ここからRANKING -->
-      <div class="col-start-7 col-end-9 flex flex-col justify-self-center">
-        <div class="h-14 w-300 flex items-center bg-black mb-8">
+      <div class="grid-span-2 w-full lg:col-start-7 lg:col-end-9 lg:flex lg:flex-col lg:justify-self-center">
+        <div class="h-14 lg:w-300 lg:flex lg:items-center bg-black mb-8">
           <div class="text-4xl font-light text-white ml-4">
             RANKING
           </div>
         </div>
 
         <!-- RANKING投稿 -->
-        <div class="h-24 w-380 flex mb-6">
+        <div class="h-24 w-full lg:w-380 flex mb-6">
           <dvi class="h-24 w-24 bg-contain bg-no-repeat bg-avocado">
             <div class="w-10 text-white bg-black">順位</div>
           </dvi>
@@ -108,8 +129,8 @@
         </div>
         <!-- RANKING投稿 -->
 
-        <div class="w-380 flex justify-center items-center mt-8">
-          <div class="h-16 w-48 flex justify-center items-center border-4 border-gray-900">
+        <div class="w-full lg:w-380 flex justify-center items-center mt-8">
+          <div class="h-16 lg:w-48 flex justify-center items-center border-4 border-gray-900">
             <div class="text-xl text-center">
               READ MORE
             </div>
@@ -118,7 +139,13 @@
       </div>
       <!-- RANKINGここまで -->
     </div>
-    <!-- メインコンテンツここまで -->
+    <!-- PCメインコンテンツここまで -->
+
+    <!-- ここからmobileメインコンテンツ -->
+    <div>
+
+    </div>
+    <!-- mobileメインコンテンツここまで -->
 
     <!-- ここから帯 -->
     <div class="h-480 w-screen bg-center bg-cover bg-avocado flex justify-center items-center">
